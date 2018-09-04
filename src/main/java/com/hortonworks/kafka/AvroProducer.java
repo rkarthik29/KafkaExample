@@ -38,7 +38,7 @@ public class AvroProducer {
         props.put("schema.registry.url", schemaUrl);
         props.put("key.serializer",StringSerializer.class.getName());
         props.put("value.serializer", KafkaAvroSerializer.class.getName());
-        //props.put(SERDES_PROTOCOL_VERSION, METADATA_ID_VERSION_PROTOCOL);
+        props.put(SERDES_PROTOCOL_VERSION, METADATA_ID_VERSION_PROTOCOL);
         props.put("logging.level.org.apache.kafka", "DEBUG");
         
         // Hard coding topic too.
